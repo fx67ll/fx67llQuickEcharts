@@ -1,5 +1,5 @@
-import baseEcharts from './charts/baseEcharts.vue';
-baseEcharts.install = function(Vue) {
-    Vue.component(baseEcharts.name, baseEcharts);
+import quickEcharts from './charts/quickEcharts.vue';
+quickEcharts.install = function(Vue) {
+    Vue.component(quickEcharts.name, quickEcharts);
 };
-export default baseEcharts;
+export default quickEcharts;

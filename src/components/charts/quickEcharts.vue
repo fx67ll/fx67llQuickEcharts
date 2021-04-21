@@ -1,11 +1,11 @@
 <template>
-	<div class="base-echarts">暂无数据</div>
+	<div class="quick-echarts">暂无数据</div>
 </template>
 
 <script>
 import * as echarts from 'echarts';
 export default {
-	name: 'baseEcharts',
+	name: 'quickEcharts',
 	props: {
 		chartOption: {
 			type: Object,
@@ -41,7 +41,7 @@ export default {
 </script>
 
 <style lang="less" scoped="scoped">
-.base-echarts {
+.quick-echarts {
 	width: 100%;
 	height: 100%;
 }

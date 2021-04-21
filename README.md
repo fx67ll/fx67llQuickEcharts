@@ -13,8 +13,11 @@ Vue.use(fx67llQuickEcharts)
 + 在需要的地方直接使用
 ```
 // chartOption，echarts option
-<base-echarts :chartOption="chartOption"></base-echarts>
+<quick-echarts :chartOption="chartOption"></quick-echarts>
 ```
+
+## 0.1.1.20210421
+* change nodename base-echarts -> quick-echarts
 
 ## 0.1.0.20210421
 * finish baseEcharts single version
