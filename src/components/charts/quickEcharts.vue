@@ -11,7 +11,7 @@ export default {
 			type: Object,
 			required: true,
 			validator(object) {
-				return Object.keys(object).length > 0
+				return Object.keys(object).length > 0;
 			}
 		}
 	},
@@ -20,9 +20,17 @@ export default {
 			myChart: null
 		};
 	},
+	watch: {
+		chartOption: {
+			deep: true,
+			handler: function(newval, oldVal) {
+				this.updateChart();
+			}
+		}
+	},
 	methods: {
-		initChart() {
-			this.myChart = echarts.init(this.$el);
+		updateChart() {
+			if (!this.myChart) return;
 			this.myChart.setOption(this.chartOption);
 		},
 		handleWindowResize() {
@@ -31,7 +39,8 @@ export default {
 		}
 	},
 	mounted() {
-		this.initChart();
+		this.myChart = echarts.init(this.$el);
+		this.updateChart();
 		window.addEventListener('resize', this.handleWindowResize);
 	},
 	beforeDestroy() {

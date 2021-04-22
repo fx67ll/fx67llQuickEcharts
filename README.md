@@ -16,6 +16,9 @@ Vue.use(fx67llQuickEcharts)
 <quick-echarts :chartOption="chartOption"></quick-echarts>
 ```
 
+## 0.1.2.20210422
+* watch props -> chartOption
+
 ## 0.1.1.20210421
 * change nodename base-echarts -> quick-echarts
 
