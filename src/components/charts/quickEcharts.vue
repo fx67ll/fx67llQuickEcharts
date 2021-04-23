@@ -1,5 +1,5 @@
 <template>
-	<div class="quick-echarts">暂无数据</div>
+	<div class="quick-echarts"></div>
 </template>
 
 <script>
