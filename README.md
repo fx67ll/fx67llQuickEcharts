@@ -12,14 +12,16 @@ Vue.use(fx67llQuickEcharts)
 ```
 3. 使用 -> `.vue`
 ```
-// chartOption，echarts option
-<quick-echarts :chartOption="chartOption"></quick-echarts>
+// chartOption: Echarts option 图表配置项
+// @nodeClick: 图表中节点的点击事件，返回值 chartParams 当前节点的具体信息
+//（没有点击到节点，返回值为null，可以用来判断是否点击到空白处了）
+<quick-echarts :chartOption="chartOption" @nodeClick="nodeClick"></quick-echarts>
 ```
 
 ### 简易示例
 ```
 <template>
-	<quick-chart :chartOption="option"></quick-chart>
+	<quick-chart :chartOption="option" @nodeClick="nodeClick"></quick-chart>
 </template>
 
 <script>
@@ -42,6 +44,11 @@ export default {
 				]
 			}
 		};
+	},
+	methods: {
+		nodeClick(chartParams) {
+			console.log(chartParams);
+		}
 	}
 };
 </script>
@@ -50,13 +57,16 @@ export default {
 ### 好用之处
 1. 新手能非常快速的上手Echarts，只需要去官网查找需要的option即可，三步即可使用
 2. 对于不需要过多复杂操作，仅做展示的图表，可以直接使用，只需要组装好需要的option传入即可
-3. 封装了自动监听数据变化和图表大小变化自动适应
+3. 封装了自动监听数据变化，图表大小变化自动适应，以及监听了图表点击事件，可用于相关的联动交互
 
 ### 不足之处
-1. 目前只有一个最基础的echarts使用组件，对于需要点击图标的一些复杂操作等等，都没有封装，未来会逐步添加
-2. 对于一些特定组件的封装程度不够，常用的线图柱图饼图会优先做出一定封装，并允许添加复合的样式
+1. 目前只有一个最基础的Echarts使用组件，对于一些复杂的图表交互操作和事件监听没有封装，未来会逐步添加
+2. 对于一些特定复杂样式没有作出封装，常用的线图柱图饼图会优先做出一定封装，并允许添加复合的样式
 3. 目前是整体组件引用，后续会添加按需加载的支持，提升项目性能
 
+
+## 0.1.4.20210424
+* add @nodeclick(chartParams)
 
 ## 0.1.3.20210423
 * delete 'empty data'
