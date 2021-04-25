@@ -13,6 +13,7 @@ Vue.use(fx67llQuickEcharts)
 3. 使用 -> `.vue`
 ```
 // chartOption: Echarts option 图表配置项
+// (option查询网址：https://echarts.apache.org/examples/zh/index.html)
 // @nodeClick: 图表中节点的点击事件，返回值 chartParams 当前节点的具体信息
 //（没有点击到节点，返回值为null，可以用来判断是否点击到空白处了）
 <quick-echarts :chartOption="chartOption" @nodeClick="nodeClick"></quick-echarts>
@@ -85,7 +86,7 @@ export default {
 ```
 
 ### 好用之处
-1. 新手能非常快速的上手Echarts，只需要去官网查找需要的option即可，三步即可使用
+1. 新手能非常快速的上手Echarts，只需要去[echarts官网](https://echarts.apache.org/examples/zh/index.html)查找需要的option即可，三步即可使用
 2. 对于不需要过多复杂操作，仅做展示的图表，可以直接使用，只需要组装好需要的option传入即可
 3. 封装了自动监听数据变化，图表大小变化自动适应，以及监听了图表点击事件，可用于相关的联动交互
 
