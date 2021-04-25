@@ -95,6 +95,8 @@ export default {
 2. 对于一些特定复杂样式没有作出封装，常用的线图柱图饼图会优先做出一定封装，并允许添加复合的样式
 3. 目前是整体组件引用，后续会添加按需加载的支持，提升项目性能
 
+## 0.1.5.20210425
+* clear index.vue for fix bugs
 
 ## 0.1.4.20210424
 * add @nodeclick(chartParams)
