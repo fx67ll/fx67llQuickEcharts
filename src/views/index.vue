@@ -1,12 +1,28 @@
 <template>
-	<div class="fx67ll-box"></div>
+	<div class="fx67ll-box"><quick-echarts :chartOption="chartOption"></quick-echarts></div>
 </template>
 
 <script>
 export default {
 	name: 'fx67llIndex',
 	data() {
-		return {};
+		return {
+			chartOption: {
+				xAxis: {
+					type: 'category',
+					data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+				},
+				yAxis: {
+					type: 'value'
+				},
+				series: [
+					{
+						data: [150, 230, 224, 218, 135, 147, 260],
+						type: 'line'
+					}
+				]
+			}
+		};
 	},
 	methods: {}
 };
