@@ -61,6 +61,20 @@ export default {
 					self.chartParams = null;
 				}
 			});
+		},
+		// 外部调用，高亮指定的数据图形，可以是number/number[]
+		setHLByDataIndex(dataIndex) {
+			this.myChart.dispatchAction({
+				type: 'highlight',
+				dataIndex: dataIndex
+			});
+		},
+		// 外部调用，取消高亮指定的数据图形，可以是number/number[]
+		setDPByDataIndex(dataIndex) {
+			this.myChart.dispatchAction({
+				type: 'downplay',
+				dataIndex: dataIndex
+			});
 		}
 	},
 	mounted() {

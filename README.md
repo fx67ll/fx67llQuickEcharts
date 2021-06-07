@@ -10,14 +10,20 @@ A tool to help you use Echarts quickly!
 import fx67llQuickEcharts from 'fx67ll-quick-echarts'
 Vue.use(fx67llQuickEcharts)
 ```
-3. 使用 -> `.vue`
+3. 使用 -> `.vue`，可在 [Echarts官网](https://echarts.apache.org/examples/zh/index.html) 查询相关option配置
 ```
-// chartOption: Echarts option 图表配置项
-// (option查询网址：https://echarts.apache.org/examples/zh/index.html)
-// @nodeClick: 图表中节点的点击事件，返回值 chartParams 当前节点的具体信息
-//（没有点击到节点，返回值为null，可以用来判断是否点击到空白处了）
-<quick-echarts :chartOption="chartOption" @nodeClick="nodeClick"></quick-echarts>
-
+// 属性 chartOption: Echarts option 图表配置项
+// 事件 @nodeClick: 图表中节点的点击事件，返回值 chartParams 当前节点的具体信息
+// 事件 @nodeClick: 如果没有点击到节点，返回值为null，可以用来判断是否点击到空白处了
+// 方法 setHLByDataIndex(dataIndex)：指定图表节点高亮的方法，传入参数 dataIndex 需要高亮的节点下标或下标数组，number/number[]
+// 方法 setDPByDataIndex(dataIndex)：指定图表节点取消高亮的方法，传入参数 dataIndex 需要取消高亮的节点下标或下标数组，number/number[]
+<quick-echarts ref="qe" :chartOption="chartOption" @nodeClick="nodeClick"></quick-echarts>
+methods{
+	this.$refs.qe.setHLByDataIndex([0, 1]);
+	this.$refs.qe.setDPByDataIndex([0, 1]);
+}
+```
+```
 // 返回值 chartParams 的各项属性详细说明
 {
     // 当前点击的图形元素所属的组件名称，
@@ -95,9 +101,9 @@ export default {
 2. 对于一些特定复杂样式没有作出封装，常用的线图柱图饼图会优先做出一定封装，并允许添加复合的样式
 3. 目前是整体组件引用，后续会添加按需加载的支持，提升项目性能
 
-## 0.x.x.202106xx
-* 封装方法用于外部调用主动改变echarts形态，完成最基本的交互需求的封装
-* [交互主要是图表的高亮和选择](https://echarts.apache.org/zh/api.html#action.highlight)
+## 0.1.6.20210607
+* add setHLByDataIndex(dataIndex) for action highlight
+* add setDPByDataIndex(dataIndex) for action downplay
 
 ## 0.1.5.20210425
 * clear index.vue for fix bugs
