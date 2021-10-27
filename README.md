@@ -3,6 +3,12 @@ A tool to help you use Echarts quickly!
 
 [npm](https://www.npmjs.com/package/fx67ll-quick-echarts "npm")  
 
+### 组件说明
+1. 这本来是一个测试如何发布Vue组件至npm库的测试项目  
+2. 做完之后发现很有意思，就稍微完善了一下成为一个简易快速构建Echarts图表的组件  
+3. 基本上消灭了我之前关于Echarts渲染DOM的一堆冗余代码  
+4. 功能不多后续有想法的话再考虑继续封装，github源码地址在底部，各位自行取用
+
 ### 使用步骤
 1. 安装 -> `npm install fx67ll-quick-echarts --save`
 2. 注册 -> `main.js`
@@ -100,6 +106,13 @@ export default {
 1. 目前只有一个最基础的Echarts使用组件，对于一些复杂的图表交互操作和事件监听没有封装，未来会逐步添加
 2. 对于一些特定复杂样式没有作出封装，常用的线图柱图饼图会优先做出一定封装，并允许添加复合的样式
 3. 目前是整体组件引用，后续会添加按需加载的支持，提升项目性能
+
+### 使用版本
+`Vue2.6 + Echarts5.1`
+
+我是 [fx67ll.com](https://fx67ll.com)，如果您发现本文有什么错误，欢迎在评论区讨论指正，感谢您的阅读！  
+如果您喜欢这篇文章，欢迎访问我的 [本文github仓库地址](https://github.com/fx67ll/fx67llQuickEcharts)，为我点一颗Star，Thanks~ :)  
+***转发请注明参考文章地址，非常感谢！！！***
 
 ## 0.1.6.20210607
 * add setHLByDataIndex(dataIndex) for action highlight
