@@ -29,7 +29,7 @@ methods{
 	this.$refs.qe.setDPByDataIndex([0, 1]);
 }
 ```
-```
+```JavaScript
 // 返回值 chartParams 的各项属性详细说明
 {
     // 当前点击的图形元素所属的组件名称，
