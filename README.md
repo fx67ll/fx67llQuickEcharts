@@ -114,8 +114,11 @@ export default {
 如果您喜欢这篇文章，欢迎访问我的 [本文github仓库地址](https://github.com/fx67ll/fx67llQuickEcharts)，为我点一颗Star，Thanks~ :)  
 ***转发请注明参考文章地址，非常感谢！！！***
 
+## 0.1.9.20211208
+* delete useless ttf  
+
 ## 0.1.8.20211028
-# fix code type
+* fix code type
 
 ## 0.1.7.20211027
 * add blog title -- '基于Vue简易封装的快速构建Echarts组件 -- fx67llQuickEcharts'  
