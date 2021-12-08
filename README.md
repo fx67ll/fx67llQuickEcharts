@@ -97,6 +97,11 @@ export default {
 </script>
 ```
 
+我是 [fx67ll.com](https://fx67ll.com)，如果您发现本组件有什么错误，欢迎在评论区讨论指正，感谢您的阅读！  
+如果您喜欢这个组件，欢迎访问 [本组件github仓库地址](https://github.com/fx67ll/fx67llQuickEcharts)，为我点一颗Star，Thanks~ :)  
+***转发请注明参考地址，非常感谢！！！***
+
+
 ### 好用之处
 1. 新手能非常快速的上手Echarts，只需要去[echarts官网](https://echarts.apache.org/examples/zh/index.html)查找需要的option即可，三步即可使用
 2. 对于不需要过多复杂操作，仅做展示的图表，可以直接使用，只需要组装好需要的option传入即可
