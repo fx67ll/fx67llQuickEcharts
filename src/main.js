@@ -7,8 +7,8 @@ Vue.config.productionTip = false
 import less from 'less'
 Vue.use(less)
 
-// import toolTest from '@c/index';
-// Vue.use(toolTest);
+import toolTest from '@c/index';
+Vue.use(toolTest);
 
 new Vue({
 	router,
