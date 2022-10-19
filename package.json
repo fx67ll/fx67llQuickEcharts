@@ -1,6 +1,6 @@
 {
 	"name": "fx67ll-quick-echarts",
-	"version": "0.1.9",
+	"version": "0.1.10",
 	"private": false,
 	"main": "lib/fx67ll-quick-echarts.umd.min.js",
 	"scripts": {
